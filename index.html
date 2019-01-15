@@ -21,6 +21,10 @@
 				else if (name=="家乐" || name=="鶸乐" || name=="乐" || name=="刘家乐" || name=="乐乐") {
 					alert("你不是帅气的"+name+"，重新输入，谢谢合作！");
 				}
+				else if (name==null) {
+					name="逗比";
+					document.getElementById("info0").innerHTML = "你好啊" + name + "，今天过得怎么样？";
+				}
 				else {
 					alert("请重新输入正确格式，谢谢合作！");
 				}
