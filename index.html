@@ -3,11 +3,13 @@
 <title>高考考前督促</title>
 </head>
 <body onload="getNowDate();timet()">
-	<h2 id="info0"></h2>
-	<h2 id="info1"></h2>
-	<h2 id="info2"></h2>
-	<h2 id="info3">还不滚去学习！</h2>
-	<h2 id="info4">在这里看这个东西！</h2>
+	<div class="h2">
+		<h2 id="info0"></h2>
+		<h2 id="info1"></h2>
+		<h2 id="info2"></h2>
+		<h2 id="info3">还不滚去学习！</h2>
+		<h2 id="info4">在这里看这个东西！</h2>
+	</div>
 
 	<script type="text/javascript">
 		{
@@ -90,6 +92,26 @@
 
 	</script>
 
+	<style type="text/css">
+		body {
+			background: url('background.jpg');
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+		.h2 {
+			text-align: center;
+			color: yellow;
+			font-size: 35px;
+			font-weight: bold;
+			font-family: 楷体;
+			padding-top: 20px;
+		}
+		#info2 {
+			color: red;
+			font-family: 微软雅黑;
+			letter-spacing: 10px;
+		}
+	</style>
 </body>
 
 </html>
