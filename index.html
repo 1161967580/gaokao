@@ -11,24 +11,52 @@
 		<h2 id="info4">在这里看这个东西！</h2>
 	</div>
 
+	<style type="text/css">
+		body {
+			background: url('background2.jpg');
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+		.h2 {
+			text-align: center;
+			color: yellow;
+			font-size: 35px;
+			font-weight: bold;
+			font-family: 楷体;
+			padding-top: 20px;
+		}
+		#info2 {
+			color: red;
+			font-family: 微软雅黑;
+			letter-spacing: 10px;
+		}
+	</style>
+	
 	<script type="text/javascript">
 		{
 			var n=1;
 			while(n==1) {
-				var name=prompt("请输入您的名字","逗比")
-				if (name.length<5 && name.length>1 && name!="家乐" && name!="鶸乐" && name!="乐" && name!="刘家乐" && name!="乐乐") {
-					document.getElementById("info0").innerHTML = "你好啊" + name + "，今天过得怎么样？";
-					n=0;
-				}
-				else if (name=="家乐" || name=="鶸乐" || name=="乐" || name=="刘家乐" || name=="乐乐") {
-					alert("你不是帅气的"+name+"，重新输入，谢谢合作！");
-				}
-				else if (name==null) {
-					name="逗比";
-					document.getElementById("info0").innerHTML = "你好啊" + name + "，今天过得怎么样？";
+				var name=prompt("请输入您的名字","逗比");
+				if (name!="null") {
+					var re=/[^\u4e00-\u9fa5]/;
+		            if(!re.test(name)) {
+						if (name.length>1 && name.length<5 && name!="家乐" && name!="鶸乐" && name!="刘家乐" && name!="乐乐" && name!="刘家" && name!="刘乐") {
+							document.getElementById("info0").innerHTML = "你好啊" + name + "，今天过得怎么样？";
+							n=0;
+						}
+						else if (name=="家乐" || name=="鶸乐" || name=="乐" || name=="刘家乐" || name=="乐乐" || name=="刘家" || name=="刘乐" || name=="家") {
+							alert("你不是帅气的"+name+"，重新输入，谢谢合作！");
+						}
+						else {
+							alert("请重新输入正确格式，谢谢合作！");
+						}
+		            }
+		            else {
+		            	alert("请输入正确格式");
+		            }
 				}
 				else {
-					alert("请重新输入正确格式，谢谢合作！");
+					alert("请输入您的名字，谢谢")
 				}
 			}
 		}
@@ -92,26 +120,6 @@
 
 	</script>
 
-	<style type="text/css">
-		body {
-			background: url('background.jpg');
-			background-repeat: no-repeat;
-			background-size: cover;
-		}
-		.h2 {
-			text-align: center;
-			color: yellow;
-			font-size: 35px;
-			font-weight: bold;
-			font-family: 楷体;
-			padding-top: 35px;
-		}
-		#info2 {
-			color: red;
-			font-family: 微软雅黑;
-			letter-spacing: 10px;
-		}
-	</style>
 </body>
 
 </html>
