@@ -36,7 +36,7 @@
 		{
 			var n=1;
 			var ua = navigator.userAgent.toLowerCase();
-			if(ua.indexOf(' qq')>-1 && ua.indexOf('mqqbrowser') <0){
+			if (ua.match(/QQ/i) == " qq") {
 				n=0;
 				document.getElementById("info0").innerHTML = "你好啊小老弟，今天过得怎么样？";
 			}
