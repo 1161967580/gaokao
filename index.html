@@ -105,10 +105,7 @@
 			var timeday = 0;
 			var dayt = months[month-1]-day;
 			var gaokaom = 6;
-			if (gaokaom-month < 0){
-				alert('高考已结束！');
-			}
-			else if (gaokaom-month == 0) {
+			if (gaokaom-month == 0) {
 				timeday = 7-day;
 			}
 			else if (gaokaom-month == 1) {
@@ -120,7 +117,21 @@
 				}
 				timeday = montht + dayt + 7;
 			}
-			document.getElementById('info2').innerHTML = "距高考仅剩" + timeday + "天了！";
+			if (gaokaom-month < 0) {
+				document.getElementById('info2').innerHTML = "高考已结束，出来嘿嘿嘿？";
+				document.getElementById('info3').innerHTML = "还不滚去玩耍！";
+			}
+			else if (timeday != 0) {
+				document.getElementById('info2').innerHTML = "距高考仅剩" + timeday + "天了！";
+			}
+			else if (timeday == 0 || timeday == -1){
+				document.getElementById('info2').innerHTML = "今天高考，祝你金榜题名！<br>风里雨里，工地等你！";
+				document.getElementById('info3').innerHTML = "还不滚去搬砖！";
+			}
+			else {
+				document.getElementById('info2').innerHTML = "高考已结束，出来嘿嘿嘿";
+				document.getElementById('info3').innerHTML = "还不滚去玩耍！";
+			}
 		}
 
 	</script>
