@@ -7,7 +7,7 @@
 		<h2 id="info0"></h2>
 		<h2 id="info1"></h2>
 		<h2 id="info2"></h2>
-		<h2 id="info3">还不滚去学习！</h2>
+		<h2 id="info3"></h2>
 		<h2 id="info4">在这里看这个东西！</h2>
 	</div>
 
@@ -123,6 +123,7 @@
 			}
 			else if (timeday != 0) {
 				document.getElementById('info2').innerHTML = "距高考仅剩" + timeday + "天了！";
+				document.getElementById('info3').innerHTML = "还不滚去学习！";
 			}
 			else if (timeday == 0 || timeday == -1){
 				document.getElementById('info2').innerHTML = "今天高考，祝你金榜题名！<br>风里雨里，工地等你！";
