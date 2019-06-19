@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>高考考前督促</title>
+<title>考研考前督促</title>
 </head>
 <body onload="getNowDate();timet()">
 	<div class="h2">
@@ -100,33 +100,33 @@
 			var year = date.getFullYear() // 年
 			var month = date.getMonth() + 1; // 月
 			var day  = date.getDate(); // 日
-			var months = new Array(31,28,31,30,31);
+			var months = new Array(31,28,31,30,31,30,31,31,30,31,30,31);
 			var montht = 0;
 			var timeday = 0;
 			var dayt = months[month-1]-day;
-			var gaokaom = 6;
-			if (gaokaom-month == 0) {
-				timeday = 7-day;
+			var kaoyanm = 12;
+			if (kaoyanm-month == 0) {
+				timeday = 21-day;
 			}
-			else if (gaokaom-month == 1) {
-				timeday = dayt + 7;
+			else if (kaoyanm-month == 1) {
+				timeday = dayt + 21;
 			}
 			else {
-				for (var i = month; i < 5; i++) {
+				for (var i = month; i < months.length-(months.length-kaoyanm+1); i++) {
 					montht += months[i];
 				}
-				timeday = montht + dayt + 7;
+				timeday = montht + dayt + 21;
 			}
-			if (gaokaom-month < 0 || timeday <0) {
-				document.getElementById('info2').innerHTML = "高考已结束，出来嘿嘿嘿？";
+			if (kaoyanm-month < 0 || timeday <0) {
+				document.getElementById('info2').innerHTML = "中考已结束，出来嘿嘿嘿？";
 				document.getElementById('info3').innerHTML = "还不滚去玩耍！";
 			}
-			else if (timeday == 0 || timeday == -1){
-				document.getElementById('info2').innerHTML = "今天高考，祝你金榜题名！<br>风里雨里，工地等你！";
-				document.getElementById('info3').innerHTML = "还不滚去搬砖！";
+			else if (timeday ==0 || timeday == -1) {
+				document.getElementById('info2').innerHTML = "考研进行中，祝你金榜题名！";
+				document.getElementById('info3').innerHTML = "加油！加油！！加油！！！";				
 			}
 			else {
-				document.getElementById('info2').innerHTML = "距高考仅剩" + timeday + "天了！";
+				document.getElementById('info2').innerHTML = "距考研仅剩" + timeday + "天了！";
 				document.getElementById('info3').innerHTML = "还不滚去学习！";
 			}
 		}
