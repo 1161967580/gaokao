@@ -2,7 +2,7 @@
 <head>
 <title>考研考前督促</title>
 </head>
-<body onload="getNowDate();timet()">
+<body onload="getNowDate()">
 	<div class="h2">
 		<h2 id="info0"></h2>
 		<h2 id="info1"></h2>
@@ -92,14 +92,6 @@
 			 seconds = "0" + seconds;
 			}
 			document.getElementById("info1").innerHTML = "现在都已经"+year+"年"+month+"月"+day+"日"+hour+':'+minutes+':'+seconds+"了！" ;
-			setTimeout('getNowDate()',500);
-		}
-
-		function timet() {
-			var date = new Date();
-			var year = date.getFullYear() // 年
-			var month = date.getMonth() + 1; // 月
-			var day  = date.getDate(); // 日
 			var months = new Array(31,28,31,30,31,30,31,31,30,31,30,31);
 			var montht = 0;
 			var timeday = 0;
@@ -129,6 +121,7 @@
 				document.getElementById('info2').innerHTML = "距考研仅剩" + timeday + "天了！";
 				document.getElementById('info3').innerHTML = "还不滚去学习！";
 			}
+			setTimeout('getNowDate()',500);
 		}
 
 	</script>
