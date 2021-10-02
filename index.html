@@ -45,11 +45,11 @@
 				if (name!="null") {
 					var re=/[^\u4e00-\u9fa5]/;
 		            if(!re.test(name)) {
-						if (name.length>1 && name.length<5 && name!="家乐" && name!="鶸乐" && name!="刘家乐" && name!="乐乐" && name!="刘家" && name!="刘乐") {
+						if (name.length>1 && name.length<5 && name!="乐") {
 							document.getElementById("info0").innerHTML = "你好啊" + name + "，今天过得怎么样？";
 							n=0;
 						}
-						else if (name=="家乐" || name=="鶸乐" || name=="乐" || name=="刘家乐" || name=="乐乐" || name=="刘家" || name=="刘乐" || name=="家") {
+						else if (name=="乐") {
 							alert("你不是帅气的"+name+"，重新输入，谢谢合作！");
 						}
 						else {
@@ -106,19 +106,19 @@
 			var dayt = months[month-1]-day;
 			var kaoyanm = 12;
 			if (kaoyanm-month == 0) {
-				timeday = 19-day;
+				timeday = 25-day;
 			}
 			else if (kaoyanm-month == 1) {
-				timeday = dayt + 19;
+				timeday = dayt + 25;
 			}
 			else {
 				for (var i = month; i < months.length-(months.length-kaoyanm+1); i++) {
 					montht += months[i];
 				}
-				timeday = montht + dayt + 19;
+				timeday = montht + dayt + 25;
 			}
 			if (kaoyanm-month < 0 || timeday <0) {
-				document.getElementById('info2').innerHTML = "中考已结束，出来嘿嘿嘿？";
+				document.getElementById('info2').innerHTML = "考研已结束，出来嘿嘿嘿？";
 				document.getElementById('info3').innerHTML = "还不滚去玩耍！";
 			}
 			else if (timeday ==0 || timeday == -1) {
